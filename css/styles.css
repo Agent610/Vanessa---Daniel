@@ -44,6 +44,122 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #e63946;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* Favorites Section */
+.favorites {
+  padding: 40px 20px;
+  background-color: #fff8f5; /* soft romantic background */
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.favorites h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #e63946; /* romantic pink/red accent */
+  margin-bottom: 30px;
+}
+
+/* Grid layout for favorite items */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* Individual favorite card */
+.favorite-item {
+  background: #fff0f5; /* light pink for cards */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover effect for cards */
+.favorite-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card title */
+.favorite-item h3 {
+  font-size: 1.3rem;
+  color: #d6336c;
+  margin-bottom: 10px;
+}
+
+/* Card text */
+.favorite-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Card images */
+.favorite-item img {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .favorites-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .favorites h2 {
+    font-size: 2rem;
+  }
+
+  .favorite-item h3 {
+    font-size: 1.1rem;
+  }
+}
+
 /* ===== Main Content ===== */
 main {
   padding: 2rem;
