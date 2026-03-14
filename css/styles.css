@@ -80,15 +80,7 @@ nav a:hover {
     transform: scale(1.05);
   }
 }
-
-/* Favorites Section */
-.favorites {
-  padding: 40px 20px;
-  background-color: #fff8f5; /* soft romantic background */
-  font-family: "Arial", sans-serif;
-  color: #333;
-}
-
+/* Section Title */
 .favorites h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -102,9 +94,10 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 25px;
   justify-items: center;
+  padding: 0 20px;
 }
 
-/* Individual favorite card */
+/* All cards */
 .favorite-item {
   background: #fff0f5; /* light pink for cards */
   padding: 20px;
@@ -116,32 +109,62 @@ nav a:hover {
     box-shadow 0.3s ease;
 }
 
-/* Hover effect for cards */
 .favorite-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Card title */
 .favorite-item h3 {
   font-size: 1.3rem;
   color: #d6336c;
   margin-bottom: 10px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
-/* Card text */
+.favorite-item:hover h3 {
+  color: #ff4d6d;
+  transform: scale(1.05);
+}
+
 .favorite-item p {
   font-size: 1rem;
   line-height: 1.5;
 }
 
-/* Card images */
 .favorite-item img {
   width: 60px;
   height: 60px;
   margin-top: 10px;
   border-radius: 8px;
   object-fit: cover;
+}
+
+/* Software Engineer (Devin) special card */
+.favorite-item.software-engineer {
+  background: #e0f7fa; /* soft tech-blue background */
+  border: 2px dashed #00bcd4; /* playful border */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  animation: coderGlow 2s ease-in-out infinite alternate;
+}
+
+.favorite-item.software-engineer img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+/* Glow animation for Devin card */
+@keyframes coderGlow {
+  from {
+    box-shadow: 0 8px 15px rgba(0, 188, 212, 0.2);
+  }
+  to {
+    box-shadow: 0 8px 25px rgba(0, 188, 212, 0.4);
+  }
 }
 
 /* Responsive tweaks */
