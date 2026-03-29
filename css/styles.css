@@ -141,6 +141,24 @@ nav a:hover {
   object-fit: cover;
 }
 
+.urkel-quote {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  font-style: italic;
+  color: #d6336c;
+}
+
+.urkel-card:hover .urkel-quote {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.urkel-card:hover {
+  background: #fff3f7;
+}
+
 /* Software Engineer (Devin) special card */
 .favorite-item.software-engineer {
   background: #e0f7fa; /* soft tech-blue background */
